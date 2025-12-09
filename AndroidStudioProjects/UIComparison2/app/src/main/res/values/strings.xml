@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UIComparison2</string>
+    <string name="accessibility_service_description">This service monitors user interactions and tracks step completion in app workflows. It analyzes UI changes and detects errors such as wrong clicks, frozen screens, and navigation issues.</string>
+</resources>

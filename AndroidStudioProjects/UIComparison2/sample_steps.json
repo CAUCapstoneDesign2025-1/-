@@ -1,0 +1,58 @@
+[
+  {
+    "stepId": 1,
+    "stepName": "Open YouTube",
+    "expectation": {
+      "expectedPackage": "com.google.android.youtube",
+      "expectedActivity": null,
+      "expectedKeyViews": [
+        {
+          "viewId": "com.google.android.youtube:id/home_container",
+          "text": null
+        },
+        {
+          "viewId": null,
+          "text": "Home"
+        }
+      ]
+    },
+    "isCompleted": false,
+    "errorType": "NONE"
+  },
+  {
+    "stepId": 2,
+    "stepName": "Search for BTS",
+    "expectation": {
+      "expectedPackage": "com.google.android.youtube",
+      "expectedActivity": null,
+      "expectedKeyViews": [
+        {
+          "viewId": "com.google.android.youtube:id/search_edit_text",
+          "text": null
+        },
+        {
+          "viewId": null,
+          "text": "BTS"
+        }
+      ]
+    },
+    "isCompleted": false,
+    "errorType": "NONE"
+  },
+  {
+    "stepId": 3,
+    "stepName": "View Search Results",
+    "expectation": {
+      "expectedPackage": "com.google.android.youtube",
+      "expectedActivity": null,
+      "expectedKeyViews": [
+        {
+          "viewId": "com.google.android.youtube:id/results_recycler_view",
+          "text": null
+        }
+      ]
+    },
+    "isCompleted": false,
+    "errorType": "NONE"
+  }
+]

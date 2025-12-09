@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Error Banner (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/errorBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F44336"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/errorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오류 발생"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다른 앱이 열렸어요"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Main Step Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/floating_background"
+        android:padding="16dp"
+        android:elevation="8dp">
+
+        <!-- Header with minimize and close buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Step Guide"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/minimizeButton"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="—"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/closeButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:text="✕"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Content (collapsible) -->
+        <LinearLayout
+            android:id="@+id/expandedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!-- Step Progress with Navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/prevStepButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="◀"
+                android:gravity="center"
+                android:textColor="#81C784"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/stepProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Step 1/5"
+                android:textColor="#81C784"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:id="@+id/nextStepButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="▶"
+                android:gravity="center"
+                android:textColor="#81C784"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Step Instruction -->
+        <TextView
+            android:id="@+id/stepInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YouTube를 여세요"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:paddingBottom="8dp" />
+
+        <!-- Status Indicator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/statusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏳"
+                android:textSize="16sp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="대기 중..."
+                android:textColor="#B0BEC5"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of expandedContent -->
+
+    </LinearLayout>
+
+</LinearLayout>
